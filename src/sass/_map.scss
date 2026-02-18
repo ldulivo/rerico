@@ -1,6 +1,5 @@
 @use 'variables' as *;
-@use "sass:color"; // Importamos el módulo de color
-
+@use "sass:color";
 .map-wrapper {
   width: 100%;
   border-radius: 8px;

@@ -35,4 +35,8 @@ export const router = createBrowserRouter([
     element: <PrivateLayout />,
     children: [],
   },
-]);
+],
+{
+  basename: "/rerico",
+}
+);

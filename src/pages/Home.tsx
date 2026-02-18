@@ -32,7 +32,6 @@ export const Home = () => {
         </div>
       </div>
       <div className="container">
-        {/* src/assets/img/fusion_comida.webp */}
         <img className="img-container"
           src="src/assets/img/fusion_comida.webp"
           />
