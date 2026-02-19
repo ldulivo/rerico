@@ -6,6 +6,11 @@ export const Home = () => {
 
   return (
     <section id="home" className="section active">
+      <div className="overlay-content">
+        <div className="overlay">
+          <img src="public/assets/img/plato_argentino.webp" alt="plato argentino a la brasa" />
+        </div>
+      </div>
       <div id="home-section">
         <div className="hero-content">
           <h1>
@@ -26,17 +31,13 @@ export const Home = () => {
         </div>
         <div className="hero-image">
           <img 
-            src="src/assets/img/tango_flamenco_v2.webp" 
+            src="public/assets/img/tango_flamenco_v2.webp" 
             alt="Plato fusión de asado y guarnición mediterránea" 
           />
         </div>
       </div>
       <div className="container">
-        <img className="img-container"
-          src="src/assets/img/fusion_comida.webp"
-          />
-      </div>
-      <div className="container">
+        <h2>Tu mesa ya está lista, <span>solo falta que llegues</span></h2>
         <Map height="400px" />
       </div>
     </section>

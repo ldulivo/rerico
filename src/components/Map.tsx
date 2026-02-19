@@ -9,7 +9,7 @@ export const Map: FC<MapProps> = ({ height = "400px", className = "" }) => {
   return (
     <div className={`map-wrapper ${className}`}>
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.123456789!2d-1.13!3d37.98!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDU4JzQ4LjAiTiAxwrAwNyc0OC4wIlc!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.4057574649605!2d-1.1158823232521213!3d37.94431077194304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6378e903a11239%3A0x41fbc6aeb10b06bf!2sC.%20Saavedra%20Fajardo%2C%2018%2C%2030157%20Murcia!5e0!3m2!1ses!2ses!4v1771534228695!5m2!1ses!2ses"
         width="100%"
         height={height}
         style={{ border: 0 }}

@@ -27,7 +27,7 @@ export const Services = () => {
 
           <div className="service-visuals">
             <img 
-              src="src/assets/img/parrilla_con_brasas.webp" 
+              src="public/assets/img/parrilla_v2.webp" 
               alt="Parrilla con brasas encendidas" 
               className="service-img"
             />
