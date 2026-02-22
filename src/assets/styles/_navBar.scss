@@ -14,7 +14,9 @@ header {
     // 1. Estado inicial (Arriba del todo)
     background-color: transparent;
     backdrop-filter: blur(0px);
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      backdrop-filter 0.3s ease;
 
     // 2. Definición de la animación de scroll
     animation: stickyNav linear both;
@@ -81,6 +83,26 @@ header {
         opacity: 1;
         color: rgb(209 213 219 / var(--text-opacity));
         text-decoration: inherit;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: var(--brand-orange);
+          transition: all 0.3s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+
+        &:hover {
+          color: var(--white);
+        }
       }
 
       .nav-menu--carta {
@@ -99,14 +121,15 @@ header {
           scaleX(var(--scale-x)) scaleY(var(--scale-y));
         text-decoration: inherit;
       }
+      
+      .active::after {
+        width: 100%;
+      }
     }
 
     @keyframes stickyNav {
       to {
-        background-color: rgba(
-          var(--brand-dark-rgb),
-          0.85
-        );
+        background-color: rgba(var(--brand-dark-rgb), 0.85);
         backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         height: 60px;

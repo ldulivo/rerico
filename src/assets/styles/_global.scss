@@ -1,0 +1,79 @@
+section {
+  padding: 6rem 0;
+  min-width: 100%;
+  height: 85vh;
+  background-color: var(--brand-gray);
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+
+  /* Breakpoints basados en estándares de la industria (como los que usa Tailwind) */
+  @media (min-width: 640px) {
+    max-width: 640px;
+  }
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+
+.direction-column {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.direction-row {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+.wood {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  background-image: url('public/img/wood_background.png');
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  font-family: Cinzel, serif;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+
+  span {
+    color: var(--brand-orange);
+  }
+}
+
+p {
+  color: var(--brand-blue);
+  line-height: 1.625;
+  font-weight: 300;
+  font-size: 1.125rem;
+
+  strong {
+    color: var(--white);
+  }
+
+  span {
+    color: var(--brand-orange);
+  }
+}
