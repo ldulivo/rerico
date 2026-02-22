@@ -18,8 +18,8 @@ header {
 
     // 2. Definición de la animación de scroll
     animation: stickyNav linear both;
-    animation-timeline: scroll(root); // Vincula la animación al scroll del documento
-    animation-range: 0px 100px;      // El cambio ocurre entre el px 0 y el 100 de scroll
+    animation-timeline: scroll(root);
+    animation-range: 5vh 100px;
 
     .nav-content {
       padding-left: 3rem;
@@ -106,10 +106,10 @@ header {
         background-color: rgba(
           var(--brand-dark-rgb),
           0.85
-        ); // Necesitarás definir el RGB en variables
+        );
         backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        height: 60px; // Opcional: reducir o ajustar altura si quieres
+        height: 60px;
       }
     }
   }
