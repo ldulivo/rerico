@@ -1,45 +1,70 @@
-import { useNavigate } from 'react-router-dom';
-import { Map } from '../components/Map';
+import ArrowBounce from "../assets/svg/ArrowBounce";
+import OakFirewood from "../assets/svg/OakFirewood";
+import PremiumCuts from "../assets/svg/PremiumCuts";
 
-export const Home = () => {
-  const navigate = useNavigate();
-
+const Home = () => {
   return (
-    <section id="home" className="section active">
-      <div className="overlay-content">
-        <div className="overlay">
-          <img src="public/assets/img/plato_argentino.webp" alt="plato argentino a la brasa" />
-        </div>
-      </div>
-      <div id="home-section">
+    <>
+      <section className="hero">
         <div className="hero-content">
           <h1>
-            Donde el Tango <br />
-            Baila con el Flamenco
+            Donde el Tango Baila
+            <br />
+            <span>con el Flamenco</span>
           </h1>
           <p>
-            Una experiencia culinaria que une la pasión de las brasas argentinas 
-            con la tradición de la cocina española. Ingredientes honestos, 
-            fuego real y café de especialidad.
+            Una experiencia culinaria que une la pasión de las brasas argentinas
+            con la tradición de la cocina española. Ingredientes honestos, fuego
+            real y café de especialidad.
           </p>
-          <button 
-            onClick={() => navigate('/menu')} 
-            className="btn-primary"
-          >
-            Ver La Carta
-          </button>
-        </div>
-        <div className="hero-image">
-          <img 
-            src="public/assets/img/tango_flamenco_v2.webp" 
-            alt="Plato fusión de asado y guarnición mediterránea" 
+          <img
+            src="public/img/tango_y_flamenco_realista_v3.webp"
+            alt="logo rerico: hombre vestido de tango bailando con mujer vestida de flamenco."
           />
         </div>
-      </div>
-      <div className="container">
-        <h2>Tu mesa ya está lista, <span>solo falta que llegues</span></h2>
-        <Map height="400px" />
-      </div>
-    </section>
+        <ArrowBounce className="arrow-bounce" size={32} color="#fff" />
+      </section>
+      {/* section: Our Essence */}
+      <section className="our-essence">
+        <div className="container direction-row">
+          <div className="order-2">
+            <div className="order-2--border">
+              <img
+                src="public/img/mesa_fusion.webp"
+                alt="mesa con fusión de comida Española y Argentina"
+              />
+            </div>
+          </div>
+          <div className="order-1">
+            <div className="order-1--essence">
+              <span></span>
+              <span>Nuestra Essence</span>
+            </div>
+            <h2>
+              Domando el <span>Fuego</span>
+            </h2>
+            <p>En Fuego & Brasa no cocinamos, oficiamos un ritual. Utilizamos exclusivamente leña de encina y carbón vegetal de quebracho blanco para aportar ese aroma inconfundible a nuestros cortes.</p>
+            <div className="order-1--insignia">
+              <div className="item-start">
+                <PremiumCuts size={32} />
+                <div className="item-text">
+                  <h4>Cortes Premium</h4>
+                  <p>Selección de las mejores razas del mundo.</p>
+                </div>
+              </div>
+              <div className="item-start">
+                <OakFirewood size={32} />
+                <div className="item-text">
+                  <h4>Leña de Encina</h4>
+                  <p>Brasas aromáticas para un sabor único.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
+
+export default Home;

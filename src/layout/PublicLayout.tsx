@@ -1,15 +1,17 @@
 import { Outlet } from "react-router-dom"
-import { Header } from "./Header"
-import { Footer } from "./Footer"
+import Header from "./public/Header";
+import Footer from "./public/Footer";
 
-export const PublicLayout = () => {
+const PublicLayout = () => {
   return (
-    <div className="public-app-wrapper">
+    <>
       <Header />
-      <main className="container">
+      <main>
         <Outlet />
       </main>
       <Footer />
-    </div>
+    </>
   )
 }
+
+export default PublicLayout;
