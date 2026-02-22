@@ -11,6 +11,16 @@ header {
     z-index: 50;
     position: fixed;
 
+    // 1. Estado inicial (Arriba del todo)
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+
+    // 2. Definición de la animación de scroll
+    animation: stickyNav linear both;
+    animation-timeline: scroll(root); // Vincula la animación al scroll del documento
+    animation-range: 0px 100px;      // El cambio ocurre entre el px 0 y el 100 de scroll
+
     .nav-content {
       padding-left: 3rem;
       padding-right: 3rem;
@@ -85,10 +95,21 @@ header {
         background-color: var(--brand-orange);
         border-radius: 9999px;
         transform: translate(var(--translate-x), var(--translate-y))
-          rotate(var(--rotate)) skewX(var(--skew-x))
-          skewY(var(--skew-y)) scaleX(var(--scale-x))
-          scaleY(var(--scale-y));
+          rotate(var(--rotate)) skewX(var(--skew-x)) skewY(var(--skew-y))
+          scaleX(var(--scale-x)) scaleY(var(--scale-y));
         text-decoration: inherit;
+      }
+    }
+
+    @keyframes stickyNav {
+      to {
+        background-color: rgba(
+          var(--brand-dark-rgb),
+          0.85
+        ); // Necesitarás definir el RGB en variables
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        height: 60px; // Opcional: reducir o ajustar altura si quieres
       }
     }
   }
