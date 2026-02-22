@@ -1,9 +1,16 @@
+import { Link, NavLink } from "react-router-dom";
+
 const Header = () => {
+
+  const menuIsActived = (isActive: boolean) => {
+    return isActive ? "nav-menu--link active" : "nav-menu--link"
+  }
+
   return (
     <header>
       <nav>
         <div className="nav-content">
-          <div className="nav-hero">
+          <Link to="/" className="nav-hero">
             <div className="nav-hero--text">
               <img
                 src="public/logo_512.png"
@@ -13,11 +20,11 @@ const Header = () => {
               <span className="nav-hero--span">R</span>e
               <span className="nav-hero--span">R</span>ico
             </div>
-          </div>
+          </Link>
           <div className="nav-menu">
-            <div className="nav-menu--link">Inicio</div>
-            <div className="nav-menu--link">Servicios y Brasas</div>
-            <div className="nav-menu--carta">La Carta</div>
+            <NavLink to="/" className={({ isActive }) => menuIsActived(isActive)}>Inicio</NavLink>
+            <NavLink to="/servicios-y-brasas" className={({ isActive }) => menuIsActived(isActive)}>Servicios y Brasas</NavLink>
+            <NavLink to="/menu" className="nav-menu--carta">La Carta</NavLink>
           </div>
         </div>
       </nav>

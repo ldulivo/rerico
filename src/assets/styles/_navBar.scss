@@ -14,12 +14,14 @@ header {
     // 1. Estado inicial (Arriba del todo)
     background-color: transparent;
     backdrop-filter: blur(0px);
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      backdrop-filter 0.3s ease;
 
     // 2. Definición de la animación de scroll
     animation: stickyNav linear both;
-    animation-timeline: scroll(root); // Vincula la animación al scroll del documento
-    animation-range: 0px 100px;      // El cambio ocurre entre el px 0 y el 100 de scroll
+    animation-timeline: scroll(root);
+    animation-range: 5vh 100px;
 
     .nav-content {
       padding-left: 3rem;
@@ -81,6 +83,26 @@ header {
         opacity: 1;
         color: rgb(209 213 219 / var(--text-opacity));
         text-decoration: inherit;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: var(--brand-orange);
+          transition: all 0.3s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+
+        &:hover {
+          color: var(--white);
+        }
       }
 
       .nav-menu--carta {
@@ -99,17 +121,18 @@ header {
           scaleX(var(--scale-x)) scaleY(var(--scale-y));
         text-decoration: inherit;
       }
+      
+      .active::after {
+        width: 100%;
+      }
     }
 
     @keyframes stickyNav {
       to {
-        background-color: rgba(
-          var(--brand-dark-rgb),
-          0.85
-        ); // Necesitarás definir el RGB en variables
+        background-color: rgba(var(--brand-dark-rgb), 0.85);
         backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        height: 60px; // Opcional: reducir o ajustar altura si quieres
+        height: 60px;
       }
     }
   }
