@@ -1,0 +1,95 @@
+header {
+  nav {
+    transition-duration: 300ms;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: transparent;
+    width: 100%;
+    height: 40px;
+    z-index: 50;
+    position: fixed;
+
+    .nav-content {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      max-width: 1024px;
+    }
+
+    .nav-hero {
+      gap: 0.5rem;
+      align-items: center;
+      display: flex;
+      color: inherit;
+      text-decoration: inherit;
+
+      .nav-hero--text {
+        display: flex;
+        color: var(--white);
+        letter-spacing: 0.05em;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-family: Cinzel, serif;
+
+        .nav-hero--span {
+          color: var(--brand-orange);
+        }
+
+        .nav-logo {
+          height: 32px;
+          margin: 0 5px 0 0;
+        }
+      }
+    }
+
+    .nav-menu {
+      display: flex;
+      font-weight: 500;
+      gap: 2rem;
+      align-items: center;
+
+      .nav-menu--link {
+        transition-property:
+          color,
+          background-color,
+          border-color,
+          text-decoration-color,
+          fill,
+          stroke,
+          -webkit-text-decoration-color;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+
+        opacity: 1;
+        color: rgb(209 213 219 / var(--text-opacity));
+        text-decoration: inherit;
+      }
+
+      .nav-menu--carta {
+        transition-duration: 300ms;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        color: var(--white);
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        background-color: var(--brand-orange);
+        border-radius: 9999px;
+        transform: translate(var(--translate-x), var(--translate-y))
+          rotate(var(--rotate)) skewX(var(--skew-x))
+          skewY(var(--skew-y)) scaleX(var(--scale-x))
+          scaleY(var(--scale-y));
+        text-decoration: inherit;
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+// Colores
+:root {
+  --brand-orange: #f97316;
+  --brand-red:    #dc2626;
+  --brand-dark:   #0a0a0a;
+  --brand-gray:   #171717;
+  --brand-light:  #e5e5e5;
+  --brand-blue:   #9ca3af;
+  --white:        #ffffff;
+
+  // Tipografía
+  --font-serif:   'Cinzel', serif;
+  --font-sans:    'Inter', sans-serif;
+  --text-opacity: 1;
+
+  --scale-x: 1;
+  --scale-y: 1;
+  --translate-x: 0;
+  --translate-y: 0;
+  --rotate: 0;
+  --skew-x: 0;
+  --skew-y: 0;
+
+
+}
+
+// fuentes
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Prevenir problemas de scroll y asegurar que el 100% sea real
+html {
+  -webkit-text-size-adjust: 100%; // Evita cambios de tamaño de fuente en iOS
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-sans);
+}
+
+// Reset de elementos multimedia
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+// Reset de tipografía y formularios
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+// Eliminar bullets de listas si no se especifican
+ul,
+ol {
+  list-style: none;
+}
+
+// Reset de enlaces
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Quitar bordes de botones por defecto
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+section {
+  padding: 6rem 0;
+  min-width: 100%;
+  height: 85vh;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+
+  /* Breakpoints basados en estándares de la industria (como los que usa Tailwind) */
+  @media (min-width: 640px) {
+    max-width: 640px;
+  }
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+
+.direction-column {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.direction-row {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
