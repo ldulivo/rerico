@@ -10,7 +10,7 @@ const Menu = lazy(() => import("./pages/Menu"));
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="rerico">
       <Routes>
         <Route path="/" element={<Suspense fallback={null}><PublicLayout /></Suspense>}>
           <Route index element={<Home />} />
