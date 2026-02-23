@@ -13,7 +13,7 @@ const Header = () => {
           <Link to="/" className="nav-hero">
             <div className="nav-hero--text">
               <img
-                src="public/logo_512.png"
+                src="logo_512.png"
                 alt="logo rerico"
                 className="nav-logo"
               />

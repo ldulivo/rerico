@@ -19,7 +19,7 @@ const Home = () => {
             real y café de especialidad.
           </p>
           <img
-            src="public/img/tango_y_flamenco_realista_v3.webp"
+            src="img/tango_y_flamenco_realista_v3.webp"
             alt="logo rerico: hombre vestido de tango bailando con mujer vestida de flamenco."
           />
         </div>
@@ -31,7 +31,7 @@ const Home = () => {
           <div className="order-2">
             <div className="order-2--border">
               <img
-                src="public/img/mesa_fusion.webp"
+                src="img/mesa_fusion.webp"
                 alt="mesa con fusión de comida Española y Argentina"
               />
             </div>
@@ -83,16 +83,16 @@ const Home = () => {
             potenciando su sabor natural a través de la magia de las brasas.</p>
           <div className="gallery">
             <div className="item item-large">
-              <img src="public/img/pimiento_provoleta_carne.webp" alt="a la parilla: provoleta pimiento carne" />
+              <img src="img/pimiento_provoleta_carne.webp" alt="a la parilla: provoleta pimiento carne" />
             </div>
             <div className="item">
-              <img src="public/img/empanadas_olivas_cerveza.webp" alt="empanadas olivas cerveza" />
+              <img src="img/empanadas_olivas_cerveza.webp" alt="empanadas olivas cerveza" />
             </div>
             <div className="item">
-              <img src="public/img/marineras_patatas_olivas.webp" alt="empanadas olivas cerveza" />
+              <img src="img/marineras_patatas_olivas.webp" alt="empanadas olivas cerveza" />
             </div>
             <div className="item item-medium">
-              <img src="public/img/costilla_chorizo_vacio.webp" alt="a la parrilla: costilla chorizo vacio" />
+              <img src="img/costilla_chorizo_vacio.webp" alt="a la parrilla: costilla chorizo vacio" />
             </div>
           </div>
           <div className="the-letter">
