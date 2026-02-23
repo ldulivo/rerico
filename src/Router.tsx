@@ -9,7 +9,7 @@ const ServicesAndGrills = lazy(() => import("./pages/ServicesAndGrills"));
 
 const Router = () => {
   return (
-    <BrowserRouter basename="rerico">
+    <BrowserRouter basename="/rerico">
       <Routes>
         <Route path="/" element={<Suspense fallback={null}><PublicLayout /></Suspense>}>
           <Route index element={<Home />} />
